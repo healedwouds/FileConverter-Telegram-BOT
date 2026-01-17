@@ -68,7 +68,7 @@ FileConverterBot/
 ### Клонирование репозитория
 
 ```bash
-git clone https://github.com/yourusername/FileConverterBot.git
+git clone https://github.com/healedwouds/FileConverterBot.git
 cd FileConverterBot
 ```
 
@@ -160,3 +160,4 @@ python -m app.bot
 **⭐ Если проект оказался полезным, поставьте звезду!**
 
 </div>
+
