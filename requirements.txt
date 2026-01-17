@@ -1,0 +1,28 @@
+# FileConverter Bot - Зависимости
+# Python 3.10+
+
+# Telegram Bot Framework
+aiogram
+
+# Работа с изображениями
+Pillow
+pillow-heif
+
+# Работа с аудио
+pydub
+
+# Работа с видео
+ffmpeg-python
+
+# Конвертация документов
+pypandoc
+
+# Работа с Excel/CSV
+openpyxl
+pandas
+
+# Асинхронные операции
+aiofiles
+
+# Переменные окружения
+python-dotenv

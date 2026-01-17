@@ -1,0 +1,38 @@
+# FileConverter Bot - Docker Compose
+# Запуск: docker-compose up -d
+
+services:
+  fileconverter-bot:
+    # Сборка из локального Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Имя контейнера
+    container_name: fileconverter-bot
+
+    # Автоматический перезапуск при сбоях
+    restart: unless-stopped
+
+    # Переменные окружения из .env файла
+    env_file:
+      - .env
+
+    # Ограничения ресурсов
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 256M
+
+    # Временная директория для конвертации
+    volumes:
+      - /tmp/fileconverter:/tmp
+
+    # Логирование
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
